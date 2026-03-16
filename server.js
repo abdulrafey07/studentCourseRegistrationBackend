@@ -26,7 +26,7 @@ app.post("/students", async (req, res) => {
   try {
     const student = new Student(req.body);
     const savedStudent = await student.save();
-    res.send(savedStudent);
+    //res.send(savedStudent);
     res.status(201).json(savedStudent);
   } catch (err) {
     res.status(400).json({ error: err.message });
